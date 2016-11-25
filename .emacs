@@ -33,7 +33,9 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8-unix)
 (delete-selection-mode 1)
-
+;; font settings
+(set-frame-font
+ "-outline-Courier New-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1")
 ;; (defun ins-c++-curly ()
 ;;   "Insert {}.
 ;; Threat is as function body when from endline before )"
