@@ -19,6 +19,11 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; wont ask if creating a new buffer
 (setq confirm-nonexistent-file-or-buffer nil)
+;; doesn't ask if killinga buffer with process attached
+;; source https://www.masteringemacs.org/article/disabling-prompts-emacs
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
 
 ;; key binding where no package is required
 (global-set-key (kbd "RET") 'newline-and-indent);return will indent now
@@ -29,6 +34,26 @@
 (global-set-key (kbd "C-b") 'backward-word)
 (global-set-key (kbd "C-j") 'switch-to-buffer)
 (global-set-key (kbd "C-o") 'find-file) ; finding files
+(global-set-key (kbd "C-v") 'yank)
+(global-set-key (kbd "C-z") 'undo)
+
+;; defining functions
+(load-file "~/elisp/functions.el")
 ;; installing packages
 (load-file "~/elisp/prelude.el")
 (load-file "~/elisp/enable-modes.el")
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (web-mode transpose-frame tern smartparens projectile magit keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional color-theme-sanityinc-tomorrow beacon auto-package-update auto-complete aggressive-indent ac-js2))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
