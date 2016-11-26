@@ -27,6 +27,8 @@
 (global-set-key (kbd "C-\\") 'split-window-right)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-b") 'backward-word)
-
+(global-set-key (kbd "C-j") 'switch-to-buffer)
+(global-set-key (kbd "C-o") 'find-file) ; finding files
 ;; installing packages
 (load-file "~/elisp/prelude.el")
+(load-file "~/elisp/enable-modes.el")
