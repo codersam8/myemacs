@@ -32,10 +32,16 @@
 (global-set-key (kbd "C-\\") 'split-window-right)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-b") 'backward-word)
+(global-set-key (kbd "C-f") 'forward-word)
 (global-set-key (kbd "C-j") 'switch-to-buffer)
 (global-set-key (kbd "C-o") 'find-file) ; finding files
 (global-set-key (kbd "C-v") 'yank)
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "M-a") 'beginning-of-buffer)
+(global-set-key (kbd "M-b") 'backward-char)
+(global-set-key (kbd "M-d") 'delete-char)
+(global-set-key (kbd "M-e") 'end-of-buffer)
+(global-set-key (kbd "M-f") 'forward-char)
 
 ;; defining functions
 (load-file "~/elisp/functions.el")

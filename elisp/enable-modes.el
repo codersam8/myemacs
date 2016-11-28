@@ -20,3 +20,6 @@
 (smartparens-global-mode t)
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
+
+
+
