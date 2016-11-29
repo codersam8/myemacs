@@ -13,6 +13,10 @@
 ;; ido vertical mode
 (ido-vertical-mode 1)
 
+;; projectile
+(projectile-global-mode)
+(global-set-key (kbd "C-h") 'projectile-find-file)
+
 ;; smartparens
 ;; gets the default config
 (require 'smartparens-config)

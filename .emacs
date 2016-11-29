@@ -23,7 +23,9 @@
 ;; source https://www.masteringemacs.org/article/disabling-prompts-emacs
 (setq kill-buffer-query-functions
   (remq 'process-kill-buffer-query-function
-         kill-buffer-query-functions))
+	kill-buffer-query-functions))
+;; delets the highlighed text
+(delete-selection-mode 1)
 
 ;; key binding where no package is required
 (global-set-key (kbd "RET") 'newline-and-indent);return will indent now
