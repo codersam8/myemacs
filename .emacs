@@ -17,6 +17,14 @@
 (desktop-save-mode 1)
 ;; no need to type full yes
 (fset 'yes-or-no-p 'y-or-n-p)
+(server-start)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(fset 'yes-or-no-p 'y-or-n-p)
+(windmove-default-keybindings)		;move windows with shift and arrow keys
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq make-backup-files nil);stop making bakcup files
 ;; wont ask if creating a new buffer
 (setq confirm-nonexistent-file-or-buffer nil)
 ;; doesn't ask if killinga buffer with process attached
