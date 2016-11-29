@@ -4,6 +4,11 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
+;; (setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
+;;                            ("http" . "www-proxy.us.oracle.com:80")
+;; ("https" . "www-proxy.us.oracle.com:80")))
+
 (package-initialize)
 
 (server-start)
@@ -11,6 +16,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(set-frame-font "-outline-Courier New-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1")
 ;; changes cursor from block to bar
 (setq-default cursor-type 'bar)
 ;; saves opened files on exit
@@ -46,6 +52,7 @@
 (global-set-key (kbd "C-b") 'backward-word)
 (global-set-key (kbd "C-f") 'forward-word)
 (global-set-key (kbd "C-j") 'switch-to-buffer)
+(global-set-key (kbd "C-l") 'goto-line) 
 (global-set-key (kbd "C-o") 'find-file) ; finding files
 (global-set-key (kbd "C-v") 'yank)
 (global-set-key (kbd "C-z") 'undo)
