@@ -34,6 +34,8 @@
 	kill-buffer-query-functions))
 ;; delets the highlighed text
 (delete-selection-mode 1)
+;; sets the frame format
+(setq-default frame-title-format "%f")
 
 ;; key binding where no package is required
 (global-set-key (kbd "RET") 'newline-and-indent);return will indent now
