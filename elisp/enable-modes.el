@@ -28,4 +28,4 @@
 (show-smartparens-global-mode +1)
 ;; (setq sp-pair-overlay-face ((t (:inherit nil))))
 
-
+(add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))

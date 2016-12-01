@@ -16,11 +16,11 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-;; (set-frame-font "-outline-Courier New-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1")
 ;; changes cursor from block to bar
 (setq-default cursor-type 'bar)
 ;; saves opened files on exit
 (desktop-save-mode 1)
+(global-auto-revert-mode)
 ;; no need to type full yes
 (fset 'yes-or-no-p 'y-or-n-p)
 (server-start)
@@ -33,6 +33,7 @@
 (setq make-backup-files nil);stop making bakcup files
 ;; wont ask if creating a new buffer
 (setq confirm-nonexistent-file-or-buffer nil)
+(setq column-number-mode t)
 ;; doesn't ask if killinga buffer with process attached
 ;; source https://www.masteringemacs.org/article/disabling-prompts-emacs
 (setq kill-buffer-query-functions
@@ -56,11 +57,17 @@
 (global-set-key (kbd "C-o") 'find-file) ; finding files
 (global-set-key (kbd "C-v") 'yank)
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "M-/") 'comment-dwim);for commenting and uncommenting
 (global-set-key (kbd "M-a") 'beginning-of-buffer)
 (global-set-key (kbd "M-b") 'backward-char)
 (global-set-key (kbd "M-d") 'delete-char)
 (global-set-key (kbd "M-e") 'end-of-buffer)
 (global-set-key (kbd "M-f") 'forward-char)
+
+(global-set-key (kbd "C-S-b") 'windmove-left)
+(global-set-key (kbd "C-S-f") 'windmove-right)
+(global-set-key (kbd "C-S-n") 'windmove-down)
+(global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
 (load-file "~/elisp/functions.el")
