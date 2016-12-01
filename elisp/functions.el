@@ -1,3 +1,16 @@
+(defun comment-or-uncomment-region-or-line ()
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+	(setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)))
+(when (not (boundp 'remote-file-name-inhibit-cache))
+  (setq remote-file-name-inhibit-cache t))
+
+(global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line);for commenting and uncommenting
+
 ;; source http://ergoemacs.org/emacs/emacs_kill-ring.html
 (defun my-delete-word (arg)
   "Delete characters forward until encountering the end of a word.
@@ -67,3 +80,19 @@ Version 2015-09-18"
           (message "Text copied"))))))
 
 (global-set-key (kbd "C-w") 'xah-copy-line-or-region)
+
+;; solves the problem of emacs desktop
+(defun emacs-process-p (pid)
+  "If pid is the process ID of an emacs process, return t, else nil.
+Also returns nil if pid is nil."
+  (when pid
+    (let ((attributes (process-attributes pid)) (cmd))
+      (dolist (attr attributes)
+        (if (string= "comm" (car attr))
+            (setq cmd (cdr attr))))
+      (if (and cmd (or (string= "emacs" cmd) (string= "emacs.exe" cmd))) t))))
+
+(defadvice desktop-owner (after pry-from-cold-dead-hands activate)
+  "Don't allow dead emacsen to own the desktop file."
+  (when (not (emacs-process-p ad-return-value))
+    (setq ad-return-value nil)))

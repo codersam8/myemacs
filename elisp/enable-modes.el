@@ -25,5 +25,4 @@
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
 
-
-
+(add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))

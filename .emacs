@@ -21,6 +21,7 @@
 (setq-default cursor-type 'bar)
 ;; saves opened files on exit
 (desktop-save-mode 1)
+(global-auto-revert-mode)
 ;; no need to type full yes
 (fset 'yes-or-no-p 'y-or-n-p)
 (server-start)
@@ -33,6 +34,7 @@
 (setq make-backup-files nil);stop making bakcup files
 ;; wont ask if creating a new buffer
 (setq confirm-nonexistent-file-or-buffer nil)
+(setq column-number-mode t)
 ;; doesn't ask if killinga buffer with process attached
 ;; source https://www.masteringemacs.org/article/disabling-prompts-emacs
 (setq kill-buffer-query-functions
@@ -56,6 +58,7 @@
 (global-set-key (kbd "C-o") 'find-file) ; finding files
 (global-set-key (kbd "C-v") 'yank)
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "M-/") 'comment-dwim);for commenting and uncommenting
 (global-set-key (kbd "M-a") 'beginning-of-buffer)
 (global-set-key (kbd "M-b") 'backward-char)
 (global-set-key (kbd "M-d") 'delete-char)
