@@ -83,7 +83,13 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (web-mode transpose-frame tern smartparens projectile magit keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional color-theme-sanityinc-tomorrow beacon auto-package-update auto-complete aggressive-indent ac-js2))))
+    (web-mode transpose-frame tern smartparens projectile magit keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional color-theme-sanityinc-tomorrow beacon auto-package-update auto-complete aggressive-indent ac-js2)))
+ '(safe-local-variable-values
+   (quote
+    ((projectile-globally-ignored-files quote
+					("class"))
+     (projectile-globally-ignored-files quote
+					(".class"))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
