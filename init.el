@@ -5,9 +5,9 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 
-;; (setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
-;;                            ("http" . "www-proxy.us.oracle.com:80")
-;; ("https" . "www-proxy.us.oracle.com:80")))
+(setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
+                           ("http" . "www-proxy.us.oracle.com:80")
+("https" . "www-proxy.us.oracle.com:80")))
 
 (package-initialize)
 
@@ -71,28 +71,8 @@
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
-(load-file "elisp/functions.el")
+(load-file "~/.emacs.d/elisp/functions.el")
 ;; installing packages
-(load-file "elisp/prelude.el")
-(load-file "elisp/enable-modes.el")
+(load-file "~/.emacs.d/elisp/prelude.el")
+(load-file "~/.emacs.d/elisp/enable-modes.el")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (web-mode transpose-frame tern smartparens projectile magit keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional color-theme-sanityinc-tomorrow beacon auto-package-update auto-complete aggressive-indent ac-js2)))
- '(safe-local-variable-values
-   (quote
-    ((projectile-globally-ignored-files quote
-					("class"))
-     (projectile-globally-ignored-files quote
-					(".class"))))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
