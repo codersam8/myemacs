@@ -3,6 +3,8 @@
 (setq ac-ignore-case nil)
 (ac-config-default)
 (setq ac-delay 0)
+(add-to-list 'ac-modes 'fundamental-mode
+	     'markdown-mode)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -24,6 +26,7 @@
 (smartparens-global-mode t)
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
+;; (setq sp-pair-overlay-face ((t (:inherit nil))))
 
 ;; swiper mode
 (global-set-key "\C-s" 'swiper)
