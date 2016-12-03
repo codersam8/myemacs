@@ -65,6 +65,7 @@
 (global-set-key (kbd "M-e") 'end-of-buffer)
 (global-set-key (kbd "M-f") 'forward-char)
 
+(global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-S-b") 'windmove-left)
 (global-set-key (kbd "C-S-f") 'windmove-right)
 (global-set-key (kbd "C-S-n") 'windmove-down)
@@ -76,3 +77,17 @@
 (load-file "~/.emacs.d/elisp/prelude.el")
 (load-file "~/.emacs.d/elisp/enable-modes.el")
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -25,4 +25,6 @@
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
 
+;; swiper mode
+(global-set-key "\C-s" 'swiper)
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
