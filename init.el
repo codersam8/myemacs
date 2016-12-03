@@ -5,9 +5,9 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 
-(setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
-                           ("http" . "www-proxy.us.oracle.com:80")
-("https" . "www-proxy.us.oracle.com:80")))
+;; (setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
+;;                            ("http" . "www-proxy.us.oracle.com:80")
+;; ("https" . "www-proxy.us.oracle.com:80")))
 
 (package-initialize)
 
@@ -84,7 +84,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2))))
+    (markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
+ '(url-proxy-services (quote (("no_proxy" . "localhost,127.0.0.1,*.oracle.com")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
