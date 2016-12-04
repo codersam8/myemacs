@@ -73,8 +73,8 @@
 ;; defining functions
 (load-file "~/.emacs.d/elisp/functions.el")
 ;; installing packages
-(load-file "~/elisp/prelude.el")
-(load-file "~/elisp/enable-modes.el")
+(load-file "~/.emacs.d/elisp/prelude.el")
+(load-file "~/.emacs.d/elisp/enable-modes.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
