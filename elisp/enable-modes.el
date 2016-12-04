@@ -5,6 +5,7 @@
 (setq ac-delay 0)
 (add-to-list 'ac-modes 'fundamental-mode
 	     'markdown-mode)
+(global-set-key (kbd "<backtab>") 'auto-complete)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -31,5 +32,5 @@
 ;; (setq sp-pair-overlay-face ((t (:inherit nil))))
 
 ;; swiper mode
-(global-set-key "\C-s" 'swiper)
+;; (global-set-key "\C-s" 'swiper)
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))

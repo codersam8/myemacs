@@ -7,7 +7,7 @@
 (add-to-list 'package-archives
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
-  '(auto-complete auto-package-update
+  '(auto-complete auto-package-update swiper
 		      color-theme-sanityinc-tomorrow hungry-delete
   		      diminish fill-column-indicator org web-mode
 		      projectile epc ido-vertical-mode
