@@ -16,7 +16,6 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-;; (set-frame-font "-outline-Courier New-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1")
 ;; changes cursor from block to bar
 (setq-default cursor-type 'bar)
 ;; saves opened files on exit

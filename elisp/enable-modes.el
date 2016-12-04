@@ -28,6 +28,7 @@
 (smartparens-global-mode t)
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
+;; (setq sp-pair-overlay-face ((t (:inherit nil))))
 
 ;; swiper mode
 (global-set-key "\C-s" 'swiper)
