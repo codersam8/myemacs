@@ -7,14 +7,16 @@
 (add-to-list 'package-archives
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
-  '(aggressive-indent auto-complete auto-package-update
-		      color-theme-sanityinc-tomorrow hungry-delete
-  		      diminish fill-column-indicator org web-mode
-		      projectile epc ido-vertical-mode
-		      company js2-mode js2-refactor ac-js2 tern transpose-frame elpy
-		      flx-ido magit beacon dash 
-		      dash-functional
-		      keyfreq groovy-mode smartparens)
+  '(auto-complete hungry-delete auto-package-update
+		  diminish fill-column-indicator org web-mode
+		  projectile epc ido-vertical-mode
+		  js2-mode js2-refactor ac-js2 tern transpose-frame elpy
+		  flx-ido swiper
+		  beacon dash dash-functional
+		  keyfreq groovy-mode smartparens
+		  ;; these need emacs 24.2
+		  magit
+		  )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()

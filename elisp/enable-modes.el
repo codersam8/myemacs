@@ -3,6 +3,8 @@
 (setq ac-ignore-case nil)
 (ac-config-default)
 (setq ac-delay 0)
+(add-to-list 'ac-modes 'fundamental-mode
+	     'markdown-mode)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -13,6 +15,8 @@
 ;; ido vertical mode
 (ido-vertical-mode 1)
 
+;; magit mode
+(global-set-key (kbd "C-x g") 'magit-status)
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
@@ -25,4 +29,6 @@
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
 
+;; swiper mode
+(global-set-key "\C-s" 'swiper)
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))

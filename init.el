@@ -16,7 +16,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(set-frame-font "-outline-Courier New-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1")
+;; (set-frame-font "-outline-Courier New-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1")
 ;; changes cursor from block to bar
 (setq-default cursor-type 'bar)
 ;; saves opened files on exit
@@ -65,16 +65,17 @@
 (global-set-key (kbd "M-e") 'end-of-buffer)
 (global-set-key (kbd "M-f") 'forward-char)
 
+(global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-S-b") 'windmove-left)
 (global-set-key (kbd "C-S-f") 'windmove-right)
 (global-set-key (kbd "C-S-n") 'windmove-down)
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
-(load-file "~/elisp/functions.el")
+(load-file "~/.emacs.d/elisp/functions.el")
 ;; installing packages
-(load-file "~/elisp/prelude.el")
-(load-file "~/elisp/enable-modes.el")
+(load-file "~/.emacs.d/elisp/prelude.el")
+(load-file "~/.emacs.d/elisp/enable-modes.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -83,13 +84,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (web-mode transpose-frame tern smartparens projectile magit keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional color-theme-sanityinc-tomorrow beacon auto-package-update auto-complete aggressive-indent ac-js2)))
- '(safe-local-variable-values
-   (quote
-    ((projectile-globally-ignored-files quote
-					("class"))
-     (projectile-globally-ignored-files quote
-					(".class"))))))
+    (markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
+ '(url-proxy-services (quote (("no_proxy" . "localhost,127.0.0.1,*.oracle.com")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
