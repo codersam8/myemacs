@@ -64,13 +64,14 @@
 (global-set-key (kbd "M-e") 'end-of-buffer)
 (global-set-key (kbd "M-f") 'forward-char)
 
+(global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-S-b") 'windmove-left)
 (global-set-key (kbd "C-S-f") 'windmove-right)
 (global-set-key (kbd "C-S-n") 'windmove-down)
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
-(load-file "~/elisp/functions.el")
+(load-file "~/.emacs.d/elisp/functions.el")
 ;; installing packages
 (load-file "~/elisp/prelude.el")
 (load-file "~/elisp/enable-modes.el")

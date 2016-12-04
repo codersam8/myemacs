@@ -7,11 +7,11 @@
 (add-to-list 'package-archives
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
-  '(aggressive-indent auto-complete auto-package-update
+  '(auto-complete auto-package-update
 		      color-theme-sanityinc-tomorrow hungry-delete
   		      diminish fill-column-indicator org web-mode
 		      projectile epc ido-vertical-mode
-		      company js2-mode js2-refactor ac-js2 tern transpose-frame elpy
+		      js2-mode js2-refactor ac-js2 tern transpose-frame elpy
 		      flx-ido magit beacon dash 
 		      dash-functional
 		      keyfreq groovy-mode smartparens)
