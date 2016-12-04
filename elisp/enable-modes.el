@@ -15,6 +15,8 @@
 ;; ido vertical mode
 (ido-vertical-mode 1)
 
+;; magit mode
+(global-set-key (kbd "C-x g") 'magit-status)
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
