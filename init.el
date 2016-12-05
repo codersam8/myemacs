@@ -81,9 +81,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("e12ba1e45e55c1bb4c2727d1d861e94b0e5e93a38524c9e4505ca629269738a4" default)))
  '(package-selected-packages
    (quote
-    (markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
+    (zerodark-theme markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
  '(url-proxy-services (quote (("no_proxy" . "localhost,127.0.0.1,*.oracle.com")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
