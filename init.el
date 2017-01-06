@@ -76,6 +76,8 @@
 ;; installing packages
 (load-file "~/.emacs.d/elisp/prelude.el")
 (load-file "~/.emacs.d/elisp/enable-modes.el")
+;; theme path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
