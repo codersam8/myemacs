@@ -1,3 +1,4 @@
+(setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
 (global-auto-complete-mode t)
 (setq ac-ignore-case nil)
@@ -18,6 +19,11 @@
 
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; (persp-mode)
+;; (require 'persp-projectile)
+
+
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
