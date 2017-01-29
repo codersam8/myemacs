@@ -53,6 +53,7 @@
 (global-set-key (kbd "C-b") 'backward-word)
 (global-set-key (kbd "C-f") 'forward-word)
 (global-set-key (kbd "C-j") 'switch-to-buffer)
+(global-set-key (kbd "C-k") 'query-replace)
 (global-set-key (kbd "C-l") 'goto-line) 
 (global-set-key (kbd "C-o") 'find-file) ; finding files
 (global-set-key (kbd "C-q") 'rgrep) ; finding files
