@@ -1,5 +1,6 @@
 (setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
+(global-set-key (kbd "<backtab>") 'auto-complete)
 (global-auto-complete-mode t)
 (setq ac-ignore-case nil)
 (ac-config-default)
