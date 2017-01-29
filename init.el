@@ -55,6 +55,7 @@
 (global-set-key (kbd "C-j") 'switch-to-buffer)
 (global-set-key (kbd "C-l") 'goto-line) 
 (global-set-key (kbd "C-o") 'find-file) ; finding files
+(global-set-key (kbd "C-q") 'rgrep) ; finding files
 (global-set-key (kbd "C-v") 'yank)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "M-/") 'comment-dwim);for commenting and uncommenting
@@ -75,6 +76,8 @@
 ;; installing packages
 (load-file "~/.emacs.d/elisp/prelude.el")
 (load-file "~/.emacs.d/elisp/enable-modes.el")
+;; theme path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

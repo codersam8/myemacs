@@ -1,8 +1,10 @@
+(setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
 (global-auto-complete-mode t)
 (setq ac-ignore-case nil)
 (ac-config-default)
 (setq ac-delay 0)
+(setq ac-disable-faces nil)
 (add-to-list 'ac-modes 'fundamental-mode
 	     'markdown-mode)
 ;; ido mode
