@@ -74,6 +74,7 @@
 (global-set-key (kbd "C-S-n") 'windmove-down)
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
+(setq grep-program "\"D:/software/installed/unixutils/UnxUpdates/grep.exe\"")
 ;; defining functions
 (load-file "~/.emacs.d/elisp/functions.el")
 ;; installing packages
