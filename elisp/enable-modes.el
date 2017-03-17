@@ -32,6 +32,8 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
+(add-hook 'prog-mode-hook 'subword-mode)
+
 ;; smartparens
 ;; gets the default config
 (require 'smartparens-config)
