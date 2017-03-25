@@ -8,6 +8,8 @@
 (setq ac-disable-faces nil)
 (add-to-list 'ac-modes 'fundamental-mode
 	     'markdown-mode)
+;; avy-mode
+(global-set-key (kbd "C-'") 'avy-goto-char-timer)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -31,6 +33,8 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
+(add-hook 'prog-mode-hook 'subword-mode)
 
 ;; smartparens
 ;; gets the default config
