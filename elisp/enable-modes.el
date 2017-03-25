@@ -8,6 +8,8 @@
 (setq ac-disable-faces nil)
 (add-to-list 'ac-modes 'fundamental-mode
 	     'markdown-mode)
+;; avy-mode
+(global-set-key (kbd "C-'") 'avy-goto-char-timer)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -19,7 +21,7 @@
 (ido-vertical-mode 1)
 
 ;; magit mode
-(global-set-key (kbd "C-x g") 'magit-status)
+;; (global-set-key (kbd "C-x g") 'magit-status)
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)

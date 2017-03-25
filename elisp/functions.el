@@ -107,6 +107,7 @@ Also returns nil if pid is nil."
                                                       rspec-mode      python-mode
                                                       c-mode          c++-mode
                                                       objc-mode       latex-mode
-                                                      plain-tex-mode  yaml-mode))
+                                                      plain-tex-mode  yaml-mode
+                                                      java-mode))
                  (let ((mark-even-if-inactive transient-mark-mode))
                    (indent-region (region-beginning) (region-end) nil))))))
