@@ -9,7 +9,7 @@
 (add-to-list 'ac-modes 'fundamental-mode
 	     'markdown-mode)
 ;; avy-mode
-(global-set-key (kbd "C-'") 'avy-goto-char-timer)
+(global-set-key (kbd "C-;") 'avy-goto-char-timer)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
