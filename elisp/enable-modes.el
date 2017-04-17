@@ -69,3 +69,5 @@
 ;; swiper mode
 ;; (global-set-key "\C-s" 'swiper)
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
+;; yasnippet
+(yas-global-mode 1)

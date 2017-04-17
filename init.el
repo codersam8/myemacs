@@ -66,6 +66,7 @@
 (global-set-key (kbd "M-d") 'delete-char)
 (global-set-key (kbd "M-e") 'end-of-buffer)
 (global-set-key (kbd "M-f") 'forward-char)
+(global-set-key (kbd "M-s") 'save-buffer)
 
 (global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-S-b") 'windmove-left)
