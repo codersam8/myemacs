@@ -43,6 +43,8 @@
 (smartparens-global-mode t)
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
+(global-set-key (kbd "M-[") 'sp-unwrap-sexp)
+
 ;; (setq sp-pair-overlay-face ((t (:inherit nil))))
 
 ;; typescript-mode
