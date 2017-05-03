@@ -73,3 +73,4 @@
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
 ;; yasnippet
 (yas-global-mode 1)
+(define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
