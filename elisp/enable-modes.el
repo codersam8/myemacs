@@ -6,8 +6,10 @@
 (ac-config-default)
 (setq ac-delay 0)
 (setq ac-disable-faces nil)
-(add-to-list 'ac-modes 'fundamental-mode
-	     'markdown-mode)
+(defun auto-complete-mode-maybe ()
+  "No maybe for you. Only AC!"
+  (unless (minibufferp (current-buffer))
+    (auto-complete-mode 1)))
 ;; avy-mode
 (global-set-key (kbd "C-;") 'avy-goto-char-timer)
 ;; ido mode
