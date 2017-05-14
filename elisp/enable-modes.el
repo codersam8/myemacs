@@ -43,6 +43,10 @@
 (require 'smartparens-config)
 ;; enables smartparens everywhere
 (smartparens-global-mode t)
+(setq sp-escape-quotes-after-insert nil)
+(setq sp-escape-wrapped-region nil)
+(setq sp-highlight-pair-overlay nil)
+(setq sp-highlight-wrap-overlay t)
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
 (global-set-key (kbd "M-[") 'sp-unwrap-sexp)
