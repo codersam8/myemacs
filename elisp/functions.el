@@ -111,3 +111,5 @@ Also returns nil if pid is nil."
                                                       java-mode))
                  (let ((mark-even-if-inactive transient-mark-mode))
                    (indent-region (region-beginning) (region-end) nil))))))
+;; sent font
+(set-frame-font "DejaVu Sans Mono-12" nil t)
