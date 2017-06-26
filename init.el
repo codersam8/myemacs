@@ -96,7 +96,11 @@
     ("e12ba1e45e55c1bb4c2727d1d861e94b0e5e93a38524c9e4505ca629269738a4" default)))
  '(package-selected-packages
    (quote
-    (yaml-mode tide multiple-cursors adaptive-wrap zerodark-theme markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
+    (counsel which-key monokai-theme avy solarized-theme yaml-mode tide multiple-cursors adaptive-wrap zerodark-theme markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
+ '(sp-escape-quotes-after-insert nil)
+ '(sp-escape-wrapped-region nil)
+ '(sp-highlight-pair-overlay nil)
+ '(sp-highlight-wrap-overlay t)
  '(url-proxy-services (quote (("no_proxy" . "localhost,127.0.0.1,*.oracle.com")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
