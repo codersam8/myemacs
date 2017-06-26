@@ -10,6 +10,15 @@
   "No maybe for you. Only AC!"
   (unless (minibufferp (current-buffer))
     (auto-complete-mode 1)))
+
+(defadvice auto-complete-mode (around disable-auto-complete-for-python)
+  (unless (eq major-mode 'python-mode) ad-do-it))
+
+(ad-activate 'auto-complete-mode)
+
+;; elpy mode for python
+(elpy-enable)
+
 ;; workaround for fci-mode
 (require 'fill-column-indicator)
 (defvar sanityinc/fci-mode-suppressed nil)
