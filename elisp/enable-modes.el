@@ -6,8 +6,32 @@
 (ac-config-default)
 (setq ac-delay 0)
 (setq ac-disable-faces nil)
-(add-to-list 'ac-modes 'fundamental-mode
-	     'markdown-mode)
+(defun auto-complete-mode-maybe ()
+  "No maybe for you. Only AC!"
+  (unless (minibufferp (current-buffer))
+    (auto-complete-mode 1)))
+
+(defadvice auto-complete-mode (around disable-auto-complete-for-python)
+  (unless (eq major-mode 'python-mode) ad-do-it))
+
+(ad-activate 'auto-complete-mode)
+
+;; elpy mode for python
+(elpy-enable)
+
+;; workaround for fci-mode
+(require 'fill-column-indicator)
+(defvar sanityinc/fci-mode-suppressed nil)
+(defadvice popup-create (before suppress-fci-mode activate)
+  "Suspend fci-mode while popups are visible"
+  (set (make-local-variable 'sanityinc/fci-mode-suppressed) fci-mode)
+  (when fci-mode
+    (turn-off-fci-mode)))
+(defadvice popup-delete (after restore-fci-mode activate)
+  "Restore fci-mode when all popups have closed"
+  (when (and (not popup-instances) sanityinc/fci-mode-suppressed)
+    (setq sanityinc/fci-mode-suppressed nil)
+    (turn-on-fci-mode)))
 ;; avy-mode
 (global-set-key (kbd "C-;") 'avy-goto-char-timer)
 ;; ido mode
@@ -21,7 +45,7 @@
 (ido-vertical-mode 1)
 
 ;; magit mode
-;; (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x g") 'magit-status)
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
@@ -41,6 +65,10 @@
 (require 'smartparens-config)
 ;; enables smartparens everywhere
 (smartparens-global-mode t)
+(setq sp-escape-quotes-after-insert nil)
+(setq sp-escape-wrapped-region nil)
+(setq sp-highlight-pair-overlay nil)
+(setq sp-highlight-wrap-overlay t)
 ;; shows parens when at parens
 (show-smartparens-global-mode +1)
 (global-set-key (kbd "M-[") 'sp-unwrap-sexp)
