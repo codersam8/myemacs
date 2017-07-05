@@ -99,5 +99,14 @@
 ;; swiper mode
 ;; (global-set-key "\C-s" 'swiper)
 (add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
+
+
+;; web-mode
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+
 ;; yasnippet
 (yas-global-mode 1)
+
+;; theme setup
+(load-theme 'zerodark t)

@@ -14,7 +14,8 @@
                   tern transpose-frame elpy
                   flx-ido beacon
                   dash dash-functional keyfreq
-                  groovy-mode smartparens magit)
+                  groovy-mode smartparens magit
+                  web-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
