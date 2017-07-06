@@ -97,7 +97,7 @@
     ("f5ad3af69f2b6b7c547208b8708d4fa7928b5697ca0845633d1d67c2d145952a" "f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" "e12ba1e45e55c1bb4c2727d1d861e94b0e5e93a38524c9e4505ca629269738a4" default)))
  '(package-selected-packages
    (quote
-    (counsel which-key monokai-theme avy solarized-theme yaml-mode tide multiple-cursors adaptive-wrap zerodark-theme markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
+    (js2-mode counsel which-key monokai-theme avy solarized-theme yaml-mode tide multiple-cursors adaptive-wrap zerodark-theme markdown-mode swiper magit web-mode transpose-frame tern smartparens projectile keyfreq js2-refactor ido-vertical-mode hungry-delete groovy-mode flx-ido fill-column-indicator epc elpy diminish dash-functional beacon auto-complete aggressive-indent ac-js2)))
  '(sp-escape-quotes-after-insert nil)
  '(sp-escape-wrapped-region nil)
  '(sp-highlight-pair-overlay nil)
