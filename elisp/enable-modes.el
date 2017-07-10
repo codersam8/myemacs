@@ -34,6 +34,13 @@
     (turn-on-fci-mode)))
 ;; avy-mode
 (global-set-key (kbd "C-;") 'avy-goto-char-timer)
+
+;; hungry delete mode
+(unless (fboundp 'hungry-delete-mode)
+  (package-install 'hungry-delete))
+
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
