@@ -34,6 +34,13 @@
     (turn-on-fci-mode)))
 ;; avy-mode
 (global-set-key (kbd "C-;") 'avy-goto-char-timer)
+
+;; hungry delete mode
+(unless (fboundp 'hungry-delete-mode)
+  (package-install 'hungry-delete))
+
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -43,6 +50,13 @@
 (setq ido-create-new-buffer 'always)
 ;; ido vertical mode
 (ido-vertical-mode 1)
+
+;; js2-mode setup
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; Better imenu
+(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
 
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
