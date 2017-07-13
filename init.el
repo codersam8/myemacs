@@ -77,10 +77,10 @@
 
 (setq grep-program "\"D:/software/installed/unixutils/UnxUpdates/grep.exe\"")
 ;; defining functions
-(load-file "~/.emacs.d/elisp/functions.el")
+(load-file "~/myemacs/elisp/functions.el")
 ;; installing packages
-(load-file "~/.emacs.d/elisp/prelude.el")
-(load-file "~/.emacs.d/elisp/enable-modes.el")
+(load-file "~/myemacs/elisp/prelude.el")
+(load-file "~/myemacs/elisp/enable-modes.el")
 ;; theme path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
