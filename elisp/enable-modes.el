@@ -15,6 +15,10 @@
   (unless (eq major-mode 'python-mode) ad-do-it))
 
 (ad-activate 'auto-complete-mode)
+;; diminish mode
+(require 'diminish)
+(diminish 'auto-complete-mode)
+(diminish 'smartparens-mode)
 
 ;; elpy mode for python
 (elpy-enable)
