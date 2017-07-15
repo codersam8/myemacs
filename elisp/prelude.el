@@ -1,7 +1,7 @@
 (package-initialize)
 
-; (add-to-list 'package-archives
-;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
             '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
@@ -14,7 +14,8 @@
                   tern transpose-frame elpy
                   flx-ido beacon
                   dash dash-functional keyfreq
-                  groovy-mode smartparens magit)
+                  groovy-mode smartparens magit
+                  zerodark-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
