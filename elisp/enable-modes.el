@@ -15,6 +15,9 @@
   (unless (eq major-mode 'python-mode) ad-do-it))
 
 (ad-activate 'auto-complete-mode)
+
+;; company mode
+(setq company-dabbrev-ignore-case t)
 ;; diminish mode
 (require 'diminish)
 (diminish 'auto-complete-mode)
@@ -125,6 +128,8 @@
 
 ;; yasnippet
 (yas-global-mode 1)
+(define-key yas-minor-mode-map [(tab)] nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
 
 ;; theme setup
