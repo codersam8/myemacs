@@ -18,6 +18,7 @@
 
 ;; company mode
 (setq company-dabbrev-ignore-case t)
+(setq company-idle-delay 0)
 ;; diminish mode
 (require 'diminish)
 (diminish 'auto-complete-mode)
