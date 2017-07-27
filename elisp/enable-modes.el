@@ -15,7 +15,7 @@
   (unless (eq major-mode 'python-mode) ad-do-it))
 
 (ad-activate 'auto-complete-mode)
-
+(beacon-mode 1)
 ;; company mode
 (setq company-dabbrev-ignore-case t)
 ;; diminish mode
