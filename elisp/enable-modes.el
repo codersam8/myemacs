@@ -68,6 +68,7 @@
 
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
+(add-to-list 'exec-path "C:\cygwin64\bin")
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
@@ -135,3 +136,4 @@
 
 ;; theme setup
 (load-theme 'zerodark t)
+(set-frame-font "Courier New-12") 
