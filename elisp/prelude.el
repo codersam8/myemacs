@@ -9,12 +9,13 @@
 (defvar prelude-packages
   '(avy auto-complete hungry-delete diminish
                   fill-column-indicator org web-mode
-                  projectile epc ido-vertical-mode
+                  projectile ido-vertical-mode
                   js2-mode js2-refactor ac-js2
                   tern transpose-frame elpy
                   flx-ido beacon
                   dash dash-functional keyfreq
-                  groovy-mode smartparens magit)
+                  groovy-mode smartparens
+		  )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()

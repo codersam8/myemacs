@@ -17,7 +17,7 @@
 (ad-activate 'auto-complete-mode)
 
 ;; elpy mode for python
-(elpy-enable)
+;; (elpy-enable)
 
 ;; workaround for fci-mode
 (require 'fill-column-indicator)
@@ -38,7 +38,7 @@
 (ido-mode 1)
 (ido-everywhere t)
 (setq ido-use-faces nil)
-(flx-ido-mode t)			;enables fuzzy matching
+;; (flx-ido-mode t)			;enables fuzzy matching
 (setq ido-enable-flex-matching t)
 (setq ido-create-new-buffer 'always)
 ;; ido vertical mode

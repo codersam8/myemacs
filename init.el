@@ -5,9 +5,9 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 
-;; (setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
-;;                            ("http" . "www-proxy.us.oracle.com:80")
-;; ("https" . "www-proxy.us.oracle.com:80")))
+(setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
+                           ("http" . "www-proxy.us.oracle.com:80")
+("https" . "www-proxy.us.oracle.com:80")))
 
 (package-initialize)
 
@@ -76,10 +76,10 @@
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
-(load-file "~/.emacs.d/elisp/functions.el")
+(load-file "~/myemacs/elisp/functions.el")
 ;; installing packages
-(load-file "~/.emacs.d/elisp/prelude.el")
-(load-file "~/.emacs.d/elisp/enable-modes.el")
+(load-file "~/myemacs/elisp/prelude.el")
+(load-file "~/myemacs/elisp/enable-modes.el")
 ;; theme path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
