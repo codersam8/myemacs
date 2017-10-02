@@ -126,7 +126,9 @@
 
 ;; web-mode
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
+(setq web-mode-engines-alist
+      '(("django"    . "\\.html\\'"))
+      )
 
 ;; yasnippet
 (yas-global-mode 1)
@@ -135,5 +137,6 @@
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
 
 ;; theme setup
-(load-theme 'zerodark t)
-(set-frame-font "Courier New-12") 
+;; (load-theme 'zerodark t)
+;; (set-frame-font "Courier New-10") 
+(add-to-list 'custom-theme-load-path "~/myemacs/themes/")
