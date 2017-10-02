@@ -18,6 +18,7 @@
 (beacon-mode 1)
 ;; company mode
 (setq company-dabbrev-ignore-case t)
+(setq company-idle-delay 0)
 ;; diminish mode
 (require 'diminish)
 (diminish 'auto-complete-mode)
@@ -124,7 +125,9 @@
 
 ;; web-mode
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
+(setq web-mode-engines-alist
+      '(("django"    . "\\.html\\'"))
+      )
 
 ;; yasnippet
 (yas-global-mode 1)
