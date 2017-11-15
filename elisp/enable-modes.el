@@ -28,6 +28,7 @@
 
 ;; elpy mode for python
 (elpy-enable)
+(pyvenv-activate "~/pyython")
 
 ;; workaround for fci-mode
 (require 'fill-column-indicator)
