@@ -1,3 +1,5 @@
+;; ace-window
+(global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
 (global-set-key (kbd "<backtab>") 'auto-complete)
