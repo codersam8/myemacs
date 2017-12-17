@@ -139,6 +139,6 @@
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
 
 ;; theme setup
-;; (load-theme 'zerodark t)
 ;; (set-frame-font "Courier New-10") 
 (add-to-list 'custom-theme-load-path "~/myemacs/themes/")
+(load-theme 'monokai t)
