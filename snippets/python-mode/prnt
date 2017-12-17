@@ -1,0 +1,5 @@
+# key: prnt
+# name: prnt
+# --
+print('*' * 80)
+print('$1', $0)
