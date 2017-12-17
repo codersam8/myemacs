@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: list_input
+# key: listi
+# --
+input().strip().split()

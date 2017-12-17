@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: int input
+# key: inti
+# --
+int(input().strip())
