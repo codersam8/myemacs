@@ -134,6 +134,8 @@
 
 ;; yasnippet
 (yas-global-mode 1)
+(setq yas-snippet-dirs (append yas-snippet-dirs
+                               '("~/myemacs/snippets")))
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
