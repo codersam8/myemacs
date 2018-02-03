@@ -133,9 +133,9 @@
       )
 
 ;; yasnippet
-(yas-global-mode 1)
 (setq yas-snippet-dirs (append yas-snippet-dirs
-                               '("~/myemacs/snippets")))
+                               '("~/myemacs/snippets/")))
+(yas-global-mode 1)
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
@@ -143,4 +143,4 @@
 ;; theme setup
 (set-frame-font "Courier New-10")
 (add-to-list 'custom-theme-load-path "~/myemacs/themes/")
-(load-theme 'monokai t)
+;; (load-theme 'monokai t)

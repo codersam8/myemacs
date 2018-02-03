@@ -12,7 +12,7 @@
                   projectile epc ido-vertical-mode
                   js2-mode js2-refactor ac-js2
                   tern transpose-frame tide elpy
-                  flx-ido beacon
+                  flx-ido beacon 
                   dash dash-functional keyfreq
                   groovy-mode smartparens magit
                   zerodark-theme)
