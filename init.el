@@ -22,6 +22,8 @@
 ;; saves opened files on exit
 (desktop-save-mode 1)
 (global-auto-revert-mode)
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
 ;; no need to type full yes
 (fset 'yes-or-no-p 'y-or-n-p)
 (server-start)
