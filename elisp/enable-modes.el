@@ -1,5 +1,5 @@
 ;; ace-window
-(global-set-key (kbd "M-p") 'ace-window)
+;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
 (global-set-key (kbd "<backtab>") 'auto-complete)
@@ -70,11 +70,16 @@
 
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
-(add-to-list 'exec-path "C:\cygwin64\bin")
+(add-to-list 'exec-path "D:\software2\cmder\vendor\git-for-windows\bin")
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
+(defun projectile-kill-buffers-forget-project()
+  (interactive)
+  (projectile-kill-buffers)
+  (projectile-remove-current-project-from-known-projects))
 
+(global-set-key (kbd "C-,") 'projectile-kill-buffers-forget-project)
 ;; multiple-cursors mode
 (require 'multiple-cursors)
 
