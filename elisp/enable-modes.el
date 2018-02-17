@@ -77,6 +77,7 @@
 (defun projectile-kill-buffers-forget-project()
   (interactive)
   (projectile-kill-buffers)
+  (projectile-invalidate-cache nil)
   (projectile-remove-current-project-from-known-projects))
 
 (global-set-key (kbd "C-,") 'projectile-kill-buffers-forget-project)
@@ -136,6 +137,13 @@
 (setq web-mode-engines-alist
       '(("django"    . "\\.html\\'"))
       )
+
+(defvar yafolding-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "<C-S-return>") #'yafolding-hide-parent-element)
+    (define-key map (kbd "<C-M-return>") #'yafolding-toggle-all)
+    (define-key map (kbd "<C-return>") #'yafolding-toggle-element)
+    map))
 
 ;; yasnippet
 (setq yas-snippet-dirs (append yas-snippet-dirs
