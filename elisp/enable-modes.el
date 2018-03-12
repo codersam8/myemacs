@@ -28,7 +28,7 @@
 
 ;; elpy mode for python
 (elpy-enable)
-
+(pyvenv-activate "~/myemacs/env/")
 ;; workaround for fci-mode
 (require 'fill-column-indicator)
 (defvar sanityinc/fci-mode-suppressed nil)
