@@ -76,9 +76,10 @@
 (global-set-key (kbd "C-h") 'projectile-find-file)
 (defun projectile-kill-buffers-forget-project()
   (interactive)
-  (projectile-kill-buffers)
   (projectile-invalidate-cache nil)
-  (projectile-remove-current-project-from-known-projects))
+  (projectile-remove-current-project-from-known-projects)
+  (projectile-kill-buffers)
+)
 
 (global-set-key (kbd "C-,") 'projectile-kill-buffers-forget-project)
 ;; multiple-cursors mode
