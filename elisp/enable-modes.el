@@ -91,7 +91,8 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
 (add-hook 'prog-mode-hook 'subword-mode)
-
+;; smart mode line
+(sml/setup)
 ;; smartparens
 ;; gets the default config
 (require 'smartparens-config)
