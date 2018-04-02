@@ -31,7 +31,6 @@
 (pyvenv-activate "~/pyython")
 
 ;; workaround for fci-mode
-(require 'fill-column-indicator)
 (defvar sanityinc/fci-mode-suppressed nil)
 (defadvice popup-create (before suppress-fci-mode activate)
   "Suspend fci-mode while popups are visible"

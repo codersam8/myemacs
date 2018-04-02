@@ -8,7 +8,7 @@
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
   '(ace-window avy auto-complete hungry-delete diminish
-                  fill-column-indicator org web-mode
+               org web-mode
                   projectile epc ido-vertical-mode
                   js2-mode js2-refactor ac-js2
                   tern transpose-frame tide elpy
