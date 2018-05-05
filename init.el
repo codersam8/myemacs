@@ -5,9 +5,9 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 
-;; (setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
-;;                            ("http" . "www-proxy.us.oracle.com:80")
-;; ("https" . "www-proxy.us.oracle.com:80")))
+(setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
+                           ("http" . "www-proxy.us.oracle.com:80")
+("https" . "www-proxy.us.oracle.com:80")))
 
 (package-initialize)
 
@@ -79,7 +79,7 @@
 (global-set-key (kbd "C-S-n") 'windmove-down)
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
-(setq grep-program "\"D:/software/installed/unixutils/UnxUpdates/grep.exe\"")
+
 ;; defining functions
 (load-file "~/myemacs/elisp/functions.el")
 ;; installing packages

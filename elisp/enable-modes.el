@@ -1,3 +1,5 @@
+(setq find-program "C:\\msys64\\usr\\bin\\find.exe")
+(setq grep-program "\"C:\\msys64\\usr\\bin\\grep.exe\"")
 ;; ace-window
 ;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
@@ -70,7 +72,8 @@
 
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
-(add-to-list 'exec-path "D:\software2\cmder\vendor\git-for-windows\bin")
+
+
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
@@ -157,5 +160,3 @@
 
 ;; theme setup
 (set-frame-font "Courier New-10")
-(add-to-list 'custom-theme-load-path "~/myemacs/themes/")
-;; (load-theme 'monokai t)
