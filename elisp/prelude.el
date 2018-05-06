@@ -15,7 +15,7 @@
                   flx-ido beacon 
                   dash dash-functional keyfreq
                   groovy-mode smartparens magit
-                  yasnippet 
+                  yasnippet yasnippet-snippets
                   zerodark-theme)
   "A list of packages to ensure are installed at launch.")
 
