@@ -96,6 +96,7 @@
 (add-hook 'prog-mode-hook 'subword-mode)
 ;; smart mode line
 (sml/setup)
+(setq sml/no-confirm-load-theme t)
 ;; smartparens
 ;; gets the default config
 (require 'smartparens-config)
