@@ -1,3 +1,6 @@
+;; custom packages
+(add-to-list 'load-path "~/.emacs.d/custom/")
+
 (setq find-program "C:\\msys64\\usr\\bin\\find.exe")
 (setq grep-program "\"C:\\msys64\\usr\\bin\\grep.exe\"")
 ;; ace-window
@@ -23,6 +26,14 @@
 ;; company mode
 (setq company-dabbrev-ignore-case t)
 (setq company-idle-delay 0)
+
+;; for django
+(add-to-list 'load-path "~/.emacs.d/custom/django-mode")
+(require 'django-html-mode)
+(require 'django-mode)
+;; (yas/load-directory "path-to/django-mode/snippets")
+(add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
+
 ;; diminish mode
 (require 'diminish)
 (diminish 'auto-complete-mode)
@@ -95,8 +106,8 @@
 
 (add-hook 'prog-mode-hook 'subword-mode)
 ;; smart mode line
-(sml/setup)
-(setq sml/no-confirm-load-theme t)
+;; (sml/setup)
+;; (setq sml/no-confirm-load-theme t)
 ;; smartparens
 ;; gets the default config
 (require 'smartparens-config)
@@ -150,6 +161,10 @@
     (define-key map (kbd "<C-M-return>") #'yafolding-toggle-all)
     (define-key map (kbd "<C-return>") #'yafolding-toggle-element)
     map))
+
+;; yaml mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;; yasnippet
 (setq yas-snippet-dirs (append yas-snippet-dirs
