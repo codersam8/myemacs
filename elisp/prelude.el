@@ -1,13 +1,14 @@
 (package-initialize)
 
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
             '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
-  '(ace-window avy auto-complete hungry-delete diminish
+  '(ace-window avy auto-complete
+               django-mode diminish hungry-delete
                   fill-column-indicator org web-mode
                   projectile epc ido-vertical-mode
                   js2-mode js2-refactor ac-js2
@@ -15,6 +16,7 @@
                   flx-ido beacon 
                   dash dash-functional keyfreq
                   groovy-mode smartparens magit
+                  yaml-mode
                   yasnippet yasnippet-snippets
                   zerodark-theme)
   "A list of packages to ensure are installed at launch.")

@@ -5,9 +5,9 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 
-(setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
-                           ("http" . "www-proxy.us.oracle.com:80")
-("https" . "www-proxy.us.oracle.com:80")))
+;; (setq url-proxy-services '(("no_proxy" . "localhost,127.0.0.1,*.oracle.com")
+;;                            ("http" . "www-proxy.us.oracle.com:80")
+;; ("https" . "www-proxy.us.oracle.com:80")))
 
 (package-initialize)
 
@@ -52,6 +52,7 @@
 (global-set-key [f5] 'revert-buffer)
 (global-set-key (kbd "C--") 'split-window-below)
 (global-set-key (kbd "C-\\") 'split-window-right)
+(global-set-key (kbd "C-/") 'comment-line)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-b") 'backward-word)
 (global-set-key (kbd "C-f") 'forward-word)
