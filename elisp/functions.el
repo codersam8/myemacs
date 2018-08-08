@@ -1,15 +1,16 @@
-(defun comment-or-uncomment-region-or-line ()
-  "Comments or uncomments the region or the current line if there's no active region."
-  (interactive)
-  (let (beg end)
-    (if (region-active-p)
-	(setq beg (region-beginning) end (region-end))
-      (setq beg (line-beginning-position) end (line-end-position)))
-    (comment-or-uncomment-region beg end)))
-(when (not (boundp 'remote-file-name-inhibit-cache))
-  (setq remote-file-name-inhibit-cache t))
+;; (defun comment-or-uncomment-region-or-line ()
+;;   "Comments or uncomments the region or the current line if there's no active region."
+;;   (interactive)
+;;   (let (beg end)
+;;     (if (region-active-p)
+;; 	(setq beg (region-beginning) end (region-end))
+;;       (setq beg (line-beginning-position) end (line-end-position)))
+;;     (comment-or-uncomment-region beg end)))
+;; (when (not (boundp 'remote-file-name-inhibit-cache))
+;;   (setq remote-file-name-inhibit-cache t))
 
-(global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line);for commenting and uncommenting
+;; (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+                                        ;for commenting and uncommenting
 
 ;; source http://ergoemacs.org/emacs/emacs_kill-ring.html
 (defun my-delete-word (arg)

@@ -1,5 +1,5 @@
 ;; ace-window
-(global-set-key (kbd "M-p") 'ace-window)
+;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
 (global-set-key (kbd "<backtab>") 'auto-complete)
@@ -21,6 +21,14 @@
 ;; company mode
 (setq company-dabbrev-ignore-case t)
 (setq company-idle-delay 0)
+
+;; for django
+(add-to-list 'load-path "~/.emacs.d/custom/django-mode")
+(require 'django-html-mode)
+(require 'django-mode)
+;; (yas/load-directory "path-to/django-mode/snippets")
+(add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
+
 ;; diminish mode
 (require 'diminish)
 (diminish 'auto-complete-mode)
@@ -70,10 +78,19 @@
 
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
 ;; projectile
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
+(defun projectile-kill-buffers-forget-project()
+  (interactive)
+  (projectile-invalidate-cache nil)
+  (projectile-remove-current-project-from-known-projects)
+  (projectile-kill-buffers)
+)
 
+(global-set-key (kbd "C-,") 'projectile-kill-buffers-forget-project)
 ;; multiple-cursors mode
 (require 'multiple-cursors)
 
@@ -130,6 +147,10 @@
 (setq web-mode-engines-alist
       '(("django"    . "\\.html\\'"))
       )
+
+;; yaml mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;; yasnippet
 (setq yas-snippet-dirs (append yas-snippet-dirs
