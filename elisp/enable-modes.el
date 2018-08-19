@@ -81,8 +81,11 @@
 
 
 ;; projectile
+(projectile-mode +1)
 (projectile-global-mode)
 (global-set-key (kbd "C-h") 'projectile-find-file)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (defun projectile-kill-buffers-forget-project()
   (interactive)
   (projectile-invalidate-cache nil)

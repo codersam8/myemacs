@@ -7,9 +7,14 @@
 (add-to-list 'package-archives
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
-  '(ace-window avy auto-complete hungry-delete diminish
-               org web-mode
-                  projectile epc ido-vertical-mode
+  '(ace-window avy auto-complete
+               diminish
+               django-mode
+               hungry-delete
+               monokai-theme
+               org
+               web-mode
+               projectile epc ido-vertical-mode
                   js2-mode js2-refactor ac-js2
                   tern transpose-frame tide elpy
                   flx-ido beacon
