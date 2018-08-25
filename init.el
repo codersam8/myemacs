@@ -1,5 +1,5 @@
 ;; add this in ~/.emacs                    ;
-;; (load-file "~/myemacs/init.el)
+;; (load-file "~/myemacs/init.el")
 ;; Start emacs server
 
 ;; Added by Package.el.  This must come before configurations of
