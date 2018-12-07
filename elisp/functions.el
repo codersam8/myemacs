@@ -98,14 +98,17 @@ Also returns nil if pid is nil."
   (when (not (emacs-process-p ad-return-value))
     (setq ad-return-value nil)))
 
-;; custom lisp
+
+;; indents pasted code automatically
+;; if you don't want to indent automatically do C-u before pasting
 (dolist (command '(yank yank-pop))
    (eval `(defadvice ,command (after indent-region activate)
             (and (not current-prefix-arg)
                  (member major-mode '(emacs-lisp-mode lisp-mode
                                                       clojure-mode    scheme-mode
                                                       haskell-mode    ruby-mode
-                                                      rspec-mode      python-mode
+                                                      rspec-mode
+                                                      ;; python-mode
                                                       c-mode          c++-mode
                                                       objc-mode       latex-mode
                                                       plain-tex-mode  yaml-mode

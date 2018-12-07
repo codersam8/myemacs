@@ -164,4 +164,4 @@
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
 
 ;; theme setup
-(load-theme 'zerodark t)
+;; (load-theme 'zerodark t)
