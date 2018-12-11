@@ -94,6 +94,10 @@
 )
 
 (global-set-key (kbd "C-,") 'projectile-kill-buffers-forget-project)
+
+;; rust-mode
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
+
 ;; multiple-cursors mode
 (require 'multiple-cursors)
 

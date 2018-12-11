@@ -80,6 +80,7 @@
 (global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
+;; (load-file "~/projects/hacktober/projectile/projectile.el")
 (load-file "~/myemacs/elisp/functions.el")
 ;; installing packages
 (load-file "~/myemacs/elisp/prelude.el")
