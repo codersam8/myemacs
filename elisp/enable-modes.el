@@ -36,7 +36,7 @@
 
 ;; elpy mode for python
 (elpy-enable)
-(pyvenv-activate "~/pyython")
+(pyvenv-activate "~/pymacs")
 
 ;; workaround for fci-mode
 ;; (defvar sanityinc/fci-mode-suppressed nil)
@@ -72,7 +72,10 @@
 ;; js2-mode setup
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
+;; Don't warn me about not having semicolon at the end
+(setq js2-strict-missing-semi-warning nil)
+;; Don't warn me about not having semicolon at the end of one line functions
+(setq js2-missing-semi-one-line-override t)
 ;; Better imenu
 (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
 
