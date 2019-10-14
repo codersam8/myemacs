@@ -10,7 +10,8 @@
 (setq ac-disable-faces nil)
 (defun auto-complete-mode-maybe ()
   "No maybe for you. Only AC!"
-  (unless (minibufferp (current-buffer))
+  (unless (minibufferp  (current-buffer))
+              
     (auto-complete-mode 1)))
 
 (defadvice auto-complete-mode (around disable-auto-complete-for-python)
@@ -21,6 +22,7 @@
 ;; company mode
 (setq company-dabbrev-ignore-case t)
 (setq company-idle-delay 0)
+(global-set-key (kbd "<backtab>") 'company-complete)
 
 ;; for django
 (add-to-list 'load-path "~/.emacs.d/custom/django-mode")
