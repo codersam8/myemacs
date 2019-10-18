@@ -69,7 +69,7 @@
 (global-set-key (kbd "M-f") 'forward-char)
 (global-set-key (kbd "M-p") 'ace-window)
 (global-set-key (kbd "M-s") 'save-buffer)
-(global-set-key (kbd "\s s") 'save-buffer)
+;; (global-set-key (kbd "\s s") 'save-buffer)
 
 (global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-S-b") 'windmove-left)
