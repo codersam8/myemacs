@@ -69,6 +69,7 @@
 (global-set-key (kbd "M-f") 'forward-char)
 (global-set-key (kbd "M-p") 'ace-window)
 (global-set-key (kbd "M-s") 'save-buffer)
+(global-set-key (kbd "\s s") 'save-buffer)
 
 (global-set-key (kbd "C-S-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-S-b") 'windmove-left)
@@ -79,10 +80,10 @@
 
 ;; defining functions
 ;; (load-file "~/projects/hacktober/projectile/projectile.el")
-(load-file "~/myemacs/elisp/functions.el")
+(load-file "~/sampath/myemacs/elisp/functions.el")
 ;; installing packages
-(load-file "~/myemacs/elisp/prelude.el")
-(load-file "~/myemacs/elisp/enable-modes.el")
+(load-file "~/sampath/myemacs/elisp/prelude.el")
+(load-file "~/sampath/myemacs/elisp/enable-modes.el")
 ;; theme path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
