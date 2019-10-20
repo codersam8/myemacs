@@ -179,3 +179,4 @@
 
 ;; theme setup
 ;; (load-theme 'zerodark t)
+(add-to-list 'default-frame-alist '(ns-appearance . dark)) ;To solve title bar issue in mac
