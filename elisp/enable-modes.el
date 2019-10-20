@@ -2,7 +2,6 @@
 ;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
-(global-set-key (kbd "<backtab>") 'auto-complete)
 (global-auto-complete-mode t)
 (setq ac-ignore-case nil)
 (ac-config-default)
@@ -13,16 +12,14 @@
   (unless (minibufferp  (current-buffer))
               
     (auto-complete-mode 1)))
+(define-key ac-mode-map (kbd "<backtab>") 'auto-complete)
 
 (defadvice auto-complete-mode (around disable-auto-complete-for-python)
   (unless (eq major-mode 'python-mode) ad-do-it))
 
 (ad-activate 'auto-complete-mode)
 (beacon-mode 1)
-;; company mode
-(setq company-dabbrev-ignore-case t)
-(setq company-idle-delay 0)
-(global-set-key (kbd "<backtab>") 'company-complete)
+
 
 ;; for django
 (add-to-list 'load-path "~/.emacs.d/custom/django-mode")
@@ -42,8 +39,14 @@
 ;; elpy mode for python
 
 (elpy-enable)
+(define-key python-mode-map (kbd "<backtab>") nil)
 
 (pyvenv-activate "~/pymacs")
+
+;; company mode
+(setq company-dabbrev-ignore-case t)
+(setq company-idle-delay 0)
+(define-key company-mode-map (kbd "<backtab>") 'company-complete)
 
 ;; workaround for fci-mode
 ;; (defvar sanityinc/fci-mode-suppressed nil)
