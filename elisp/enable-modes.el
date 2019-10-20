@@ -178,5 +178,6 @@
 (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
 
 ;; theme setup
-;; (load-theme 'zerodark t)
+(load-theme 'monokai t)
+(set-face-attribute 'default nil :height 140)
 (add-to-list 'default-frame-alist '(ns-appearance . dark)) ;To solve title bar issue in mac
