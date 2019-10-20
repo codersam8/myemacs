@@ -9,7 +9,7 @@
 (defvar prelude-packages
   '(ace-window avy auto-complete
                diminish
-               django-mode
+               django-mode exec-path-from-shell
                hungry-delete
                monokai-theme
                org

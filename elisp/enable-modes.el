@@ -36,8 +36,13 @@
 (diminish 'auto-complete-mode)
 (diminish 'smartparens-mode)
 
+;; This is for making elpy mode work
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 ;; elpy mode for python
+
 (elpy-enable)
+
 (pyvenv-activate "~/pymacs")
 
 ;; workaround for fci-mode
