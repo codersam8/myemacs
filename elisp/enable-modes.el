@@ -92,6 +92,8 @@
 ;; magit mode
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; org mode
+(define-key org-mode-map (kbd "C-j") nil)
 
 ;; projectile
 (projectile-mode +1)
@@ -174,7 +176,7 @@
 
 ;; yasnippet
 (setq yas-snippet-dirs (append yas-snippet-dirs
-                               '("~/myemacs/snippets/")))
+                               '("~/sampath/myemacs/snippets/")))
 (yas-global-mode 1)
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
