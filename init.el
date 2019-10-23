@@ -67,16 +67,16 @@
 (global-set-key (kbd "M-d") 'delete-char)
 (global-set-key (kbd "M-e") 'end-of-buffer)
 (global-set-key (kbd "M-f") 'forward-char)
-(global-set-key (kbd "M-p") 'ace-window)
+(global-set-key (kbd "M-o") 'ace-window)
 (global-set-key (kbd "M-s") 'save-buffer)
 ;; (global-set-key (kbd "\s s") 'save-buffer)
 
 (global-set-key (kbd "C-S-a") 'mark-whole-buffer)
-(global-set-key (kbd "C-S-b") 'windmove-left)
-(global-set-key (kbd "C-S-e") 'delete-window)
-(global-set-key (kbd "C-S-f") 'windmove-right)
-(global-set-key (kbd "C-S-n") 'windmove-down)
-(global-set-key (kbd "C-S-p") 'windmove-up)
+;; (global-set-key (kbd "C-S-b") 'windmove-left)
+;; (global-set-key (kbd "C-S-e") 'delete-window)
+;; (global-set-key (kbd "C-S-f") 'windmove-right)
+;; (global-set-key (kbd "C-S-n") 'windmove-down)
+;; (global-set-key (kbd "C-S-p") 'windmove-up)
 
 ;; defining functions
 ;; (load-file "~/projects/hacktober/projectile/projectile.el")

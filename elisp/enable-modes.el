@@ -93,6 +93,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; org mode
+(require 'org)
 (define-key org-mode-map (kbd "C-j") nil)
 
 ;; projectile
