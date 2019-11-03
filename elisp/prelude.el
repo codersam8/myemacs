@@ -10,7 +10,7 @@
   '(ace-window avy auto-complete
                diminish
                django-mode exec-path-from-shell
-               hungry-delete
+               hungry-delete hydra
                monokai-theme
                org
                web-mode

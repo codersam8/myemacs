@@ -69,6 +69,12 @@
 
 (require 'hungry-delete)
 (global-hungry-delete-mode)
+
+;; hydra
+(defhydra hydra-zoom (global-map "<f2>")
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out"))
 ;; ido mode
 (ido-mode 1)
 (ido-everywhere t)
@@ -185,5 +191,5 @@
 
 ;; theme setup
 (load-theme 'monokai t)
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 160)
 (add-to-list 'default-frame-alist '(ns-appearance . dark)) ;To solve title bar issue in mac
