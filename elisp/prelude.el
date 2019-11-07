@@ -7,7 +7,8 @@
 (add-to-list 'package-archives
             '("elpa" . "http://elpa.gnu.org/packages/") t)
 (defvar prelude-packages
-  '(ace-window avy auto-complete
+  '(ace-window ag
+               avy auto-complete
                diminish
                django-mode exec-path-from-shell
                hungry-delete hydra
