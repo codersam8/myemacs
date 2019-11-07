@@ -1,3 +1,5 @@
+;; ag
+(global-set-key (kbd "s-f") 'ag-project-files)
 ;; ace-window
 ;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
