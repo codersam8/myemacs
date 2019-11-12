@@ -46,7 +46,7 @@
 
 ;; key binding where no package is required
 (global-set-key (kbd "RET") 'newline-and-indent);return will indent now
-(global-set-key [f5] 'revert-buffer)
+;; (global-set-key [f5] 'revert-buffer)
 (global-set-key (kbd "C--") 'split-window-below)
 (global-set-key (kbd "C-\\") 'split-window-right)
 (global-set-key (kbd "C-/") 'comment-line)

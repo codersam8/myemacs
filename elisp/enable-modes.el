@@ -19,6 +19,9 @@
 (defadvice auto-complete-mode (around disable-auto-complete-for-python)
   (unless (eq major-mode 'python-mode) ad-do-it))
 
+(defadvice auto-complete-mode (around disable-auto-complete-for-django)
+  (unless (eq major-mode 'django-mode) ad-do-it))
+
 (ad-activate 'auto-complete-mode)
 (beacon-mode 1)
 
@@ -29,6 +32,8 @@
 (require 'django-mode)
 ;; (yas/load-directory "path-to/django-mode/snippets")
 (add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
+;; deadgrep
+(global-set-key (kbd "<f5>") #'deadgrep)
 
 ;; diminish mode
 (require 'diminish)

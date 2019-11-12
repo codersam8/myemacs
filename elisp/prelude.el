@@ -21,6 +21,7 @@
                   flx-ido beacon
                   dash dash-functional keyfreq
                   groovy-mode smartparens magit
+                  vue-mode
                   yaml-mode
                   yasnippet yasnippet-snippets
                   zerodark-theme)
