@@ -1,5 +1,5 @@
 ;; ag
-(global-set-key (kbd "s-f") 'ag-project-files)
+;; (global-set-key (kbd "s-f") 'ag-project-files)
 ;; ace-window
 ;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
@@ -33,7 +33,7 @@
 ;; (yas/load-directory "path-to/django-mode/snippets")
 (add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
 ;; deadgrep
-(global-set-key (kbd "<f5>") #'deadgrep)
+(global-set-key (kbd "s-f") #'deadgrep)
 
 ;; diminish mode
 (require 'diminish)
@@ -198,5 +198,5 @@
 
 ;; theme setup
 (load-theme 'monokai t)
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 150)
 (add-to-list 'default-frame-alist '(ns-appearance . dark)) ;To solve title bar issue in mac
