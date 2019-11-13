@@ -33,7 +33,7 @@
 ;; (yas/load-directory "path-to/django-mode/snippets")
 (add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mode))
 ;; deadgrep
-(global-set-key (kbd "s-f") #'deadgrep)
+(global-set-key (kbd "s-f") 'deadgrep)
 
 ;; diminish mode
 (require 'diminish)
