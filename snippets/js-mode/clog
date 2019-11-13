@@ -1,0 +1,5 @@
+# key: clog
+# name: clog
+# --
+console.log('********************************************************')
+console.log('tony ${1: } ' + JSON.stringify($1))$0
