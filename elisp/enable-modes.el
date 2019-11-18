@@ -25,7 +25,8 @@
 (ad-activate 'auto-complete-mode)
 (beacon-mode 1)
 
-
+;; default-text-scale
+(default-text-scale-mode t)
 ;; for django
 (add-to-list 'load-path "~/.emacs.d/custom/django-mode")
 (require 'django-html-mode)
