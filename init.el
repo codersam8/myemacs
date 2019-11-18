@@ -30,7 +30,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (windmove-default-keybindings)		;move windows with shift and arrow keys
 (setq confirm-nonexistent-file-or-buffer nil)
-(setq make-backup-files nil);stop making bakcup files
+;; changes directory of backup files
+(setq backup-directory-alist `(("." . "~/.saves")))
+;; (setq make-backup-files nil);stop making bakcup files
 ;; wont ask if creating a new buffer
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq column-number-mode t)
