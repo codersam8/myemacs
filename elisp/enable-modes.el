@@ -22,6 +22,9 @@
 (defadvice auto-complete-mode (around disable-auto-complete-for-django)
   (unless (eq major-mode 'django-mode) ad-do-it))
 
+(defadvice auto-complete-mode (around disable-auto-complete-for-django)
+  (unless (eq major-mode 'typescript-mode) ad-do-it))
+
 (ad-activate 'auto-complete-mode)
 (beacon-mode 1)
 
@@ -184,7 +187,7 @@
 (setq web-mode-engines-alist
       '(("django"    . "\\.html\\'"))
       )
-
+(setq web-mode-enable-auto-pairing nil) ;this is the one actually worked
 ;; yaml mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
