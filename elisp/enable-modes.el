@@ -4,28 +4,30 @@
 ;; (global-set-key (kbd "M-p") 'ace-window)
 (setq-default indent-tabs-mode nil)
 ;; configuration for auto complete mode
-(global-auto-complete-mode t)
-(setq ac-ignore-case nil)
-(ac-config-default)
-(setq ac-delay 0)
-(setq ac-disable-faces nil)
-(defun auto-complete-mode-maybe ()
-  "No maybe for you. Only AC!"
-  (unless (minibufferp  (current-buffer))
+;; (global-auto-complete-mode t)
+;; (setq ac-ignore-case nil)
+;; (ac-config-default)
+;; (setq ac-delay 0)
+;; (setq ac-disable-faces nil)
+;; (defun auto-complete-mode-maybe ()
+;;   "No maybe for you. Only AC!"
+;;   (unless (minibufferp  (current-buffer))
               
-    (auto-complete-mode 1)))
-(define-key ac-mode-map (kbd "<backtab>") 'auto-complete)
+;;     (auto-complete-mode 1)))
+;; (define-key ac-mode-map (kbd "<backtab>") 'auto-complete)
 
-(defadvice auto-complete-mode (around disable-auto-complete-for-python)
-  (unless (eq major-mode 'python-mode) ad-do-it))
+;; (defadvice auto-complete-mode (around disable-auto-complete-for-python)
+;;   (unless (eq major-mode 'python-mode) ad-do-it))
+;; (ad-activate 'auto-complete-mode)
 
-(defadvice auto-complete-mode (around disable-auto-complete-for-django)
-  (unless (eq major-mode 'django-mode) ad-do-it))
+;; (defadvice auto-complete-mode (around disable-auto-complete-for-django)
+;;   (unless (eq major-mode 'django-mode) ad-do-it))
+;; (ad-activate 'auto-complete-mode)
 
-(defadvice auto-complete-mode (around disable-auto-complete-for-django)
-  (unless (eq major-mode 'typescript-mode) ad-do-it))
+;; (defadvice auto-complete-mode (around disable-auto-complete-for-django)
+;;   (unless (eq major-mode 'typescript-mode) ad-do-it))
 
-(ad-activate 'auto-complete-mode)
+;; (ad-activate 'auto-complete-mode)
 (beacon-mode 1)
 
 ;; default-text-scale

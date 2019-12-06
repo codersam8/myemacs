@@ -1,0 +1,5 @@
+# key: log
+# name: log
+# --
+logger.info('*' * 80)
+logger.info('tony ${1: }', $1)$0
