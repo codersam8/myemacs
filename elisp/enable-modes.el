@@ -59,7 +59,9 @@
 ;; company mode
 (setq company-dabbrev-ignore-case t)
 (setq company-idle-delay 0)
+(add-hook 'after-init-hook 'global-company-mode)
 (define-key company-mode-map (kbd "<backtab>") 'company-complete)
+(setq company-dabbrev-downcase nil)
 
 ;; workaround for fci-mode
 ;; (defvar sanityinc/fci-mode-suppressed nil)
@@ -114,6 +116,7 @@
 ;; org mode
 (require 'org)
 (define-key org-mode-map (kbd "C-j") nil)
+(setq org-startup-truncated nil)
 
 ;; projectile
 (projectile-mode +1)
