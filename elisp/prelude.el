@@ -9,6 +9,7 @@
 (defvar prelude-packages
   '(ace-window ag
                avy auto-complete
+               deadgrep
                default-text-scale
                diminish
                django-mode exec-path-from-shell
